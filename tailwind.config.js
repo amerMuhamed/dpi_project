@@ -9,7 +9,7 @@ module.exports = {
         secondaryColor: "#ffa500",
         thirdColor: "#FCBD01",
         orangeJP: "#F1663A",
-        background: "#FAF8F7",
+        background: "rgb(54 53 68)",
         background2: "#4c3b4f5c",
 
       },
