@@ -15,7 +15,15 @@ import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 
 function App() {
-  const currentUser = false;
+  const currentUser = true;
+  const ProtectedRoute = ({ children }) => {
+   
+    if(!currentUser){
+    return <Navigate to="/login" />
+  }
+    return children
+  }
+
   const Layout = () => {
     return (
       <div>
@@ -28,16 +36,6 @@ function App() {
       </div>
     );
   };
-  const ProtectedRoute = ({ children }) => {
-   
-      if(!currentUser){
-      return <Navigate to="/login" />
-    }
-      return children
-    }
-  
-  
-
 
   const router = createBrowserRouter([
     {
