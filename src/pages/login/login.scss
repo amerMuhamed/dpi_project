@@ -1,0 +1,11 @@
+.bg-custom-bg  {
+    background-image: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F69ada894-ff43-4a16-9797-b4334ab6b2b8.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  @media (min-width: 640px) {
+    .bg-white {
+      background-color: white;
+    }
+  }
