@@ -9,7 +9,7 @@ const Login = () => {
         <div className="flex-1 bg-custom-bg bg-cover bg-center p-10 flex flex-col items-center justify-around gap-16 text-white hidden sm:flex">
           <h1 className="text-6xl leading-[70px] font-serif">Welcome</h1>
           <div className="flex flex-col items-center">
-            <span className="text-stone-200">Do you have an account?</span>
+            <span className="text-stone-200">Don't you have an account yet?</span>
             <Link to="/register" className="text-center w-full">
               <button className="w-1/2 text-lg bg-red-300 hover:bg-red-900 text-black p-2 border-0 rounded-md cursor-pointer">
                 Register
@@ -34,11 +34,15 @@ const Login = () => {
                 type="password"
                 placeholder="Password"
               />
-              <div>
+            
+                <div className="text-center">
               <button className="w-32  bg-yellow-800 hover:bg-red-900 text-white text-xxl p-3 border-0 rounded-md cursor-pointer">
                 Login
               </button>
-              <Link to="/register" className="text-center block sm:hidden text-white w-full">
+              </div>
+              <div className="flex gap-1">
+              <span className="text-black font-bold sm:hidden">Don't you have an account yet?</span>
+              <Link to="/register" className="w-fit text-center block sm:hidden font-bold font-mono text-blue-500 ">
               Signup
                </Link>
                </div>

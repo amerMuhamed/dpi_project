@@ -2,11 +2,10 @@ import Login from "./pages/login/Login";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
   Outlet,
   Navigate,
 } from "react-router-dom";
-import ReactDOM from "react-dom/client";
+
 import Register from "./pages/register/Register";
 import Navbar from "./components/navbar/Navbar";
 import LeftBar from "./components/leftBar/LeftBar";
@@ -30,7 +29,9 @@ function App() {
         <Navbar />
         <div className="flex">
           <LeftBar />
-          <Outlet />
+          <div style={{ flex: 6 }}>
+          <Outlet />            
+          </div>
           <RightBar />
         </div>
       </div>
@@ -47,7 +48,8 @@ function App() {
       children: [
         {
           path: "/",
-          element: <Home />,},
+          element: <Home />,
+        },
         {
           path: "/profile/:id",
           element: <Profile />,

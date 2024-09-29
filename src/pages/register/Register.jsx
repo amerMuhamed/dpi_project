@@ -21,10 +21,15 @@ const Register = () => {
             <input type="password" placeholder="Password" />
             <input type="text" placeholder="Name" />
            <div className="flex justify-around items-center">
-           <button>Register</button>
-            <Link to="/login" className="block sm:hidden" title="Click here to login page">
-            Login Page
+          <div className="flex flex-col w-full justify-center items-center">
+           <button className="">Register</button>
+           <div className="flex ">
+           <span className="text-black font-bold sm:hidden">Do you have an account?</span>
+            <Link to="/login" className="block text-blue-700 cursor-pointer sm:hidden" title="Click here to login page">
+            Login 
           </Link>
+          </div>
+          </div>
            </div>
           </form>
         </div>
