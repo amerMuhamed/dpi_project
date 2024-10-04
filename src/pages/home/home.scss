@@ -1,0 +1,29 @@
+.home{
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    padding: 20px 10px;
+    background-color: #f9f9f9;
+@media (max-width: 768px) {
+    padding: 10px;
+}
+ }
+ 
+ .darkHome{
+     background-color: #333;
+     color: white;
+     height: calc(100vh - 70px);
+     overflow: scroll;
+     scroll-behavior: smooth;
+     &::-webkit-scrollbar {
+         display: none;
+     }
+     padding: 20px 10px;
+  
+ @media (max-width: 768px) {
+     padding: 10px;
+ }
+ }

@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 import "./login.scss";
-
+import { useContext } from "react";
+import { AuthContext } from "../../context/authContext";
 const Login = () => {
+  const { login } = useContext(AuthContext);
+
+  const handleLogin = () => {
+    login();
+  };
   return (
     <div className="h-screen bg-background flex items-center justify-center">
       <div className="flex shadow-md w-[750px] bg-white rounded-none sm:rounded-xl sm:h-[400px] h-fit overflow-hidden flex-col sm:flex-row">
@@ -36,7 +42,8 @@ const Login = () => {
               />
             
                 <div className="text-center">
-              <button className="w-32  bg-yellow-800 hover:bg-red-900 text-white text-xxl p-3 border-0 rounded-md cursor-pointer">
+              <button onClick={handleLogin}
+               className="w-32  bg-yellow-800 hover:bg-red-900 text-white text-xxl p-3 border-0 rounded-md cursor-pointer">
                 Login
               </button>
               </div>

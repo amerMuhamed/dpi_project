@@ -12,22 +12,23 @@ import Messages from "../../assets/10.png";
 import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
-import Amer from "../../assets/amerImage.jpg";
-
+import { AuthContext } from "../../context/authContext";
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContext";
 
 const LeftBar = () => {
-
-
+const {darkMode} = useContext(DarkModeContext);
+const {currentUser} = useContext(AuthContext)
   return (
-    <div className="leftBar">
+    <div className={`leftBar hidden sm:block ${darkMode ? "bg-[#222] text-white" : "bg-white text-black"}`}>
       <div className="container">
         <div className="menu">
           <div className="user">
             <img
-              src={Amer}
+              src={currentUser.profilePic}
               alt=""
             />
-            <span>Amer</span>
+            <span>{currentUser.name}</span>
           </div>
           <div className="item">
             <img src={Friends} alt="" />

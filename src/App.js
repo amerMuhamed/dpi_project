@@ -12,9 +12,14 @@ import LeftBar from "./components/leftBar/LeftBar";
 import RightBar from "./components/rightBar/RightBar";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
-
+import { DarkModeContext } from "./context/darkModeContext";
+import { useContext } from "react";
+import { AuthContext } from "./context/authContext";
 function App() {
-  const currentUser = true;
+  const { darkMode } = useContext(DarkModeContext);
+  const {currentUser} = useContext(AuthContext)
+  
+ 
   const ProtectedRoute = ({ children }) => {
    
     if(!currentUser){
@@ -25,13 +30,17 @@ function App() {
 
   const Layout = () => {
     return (
-      <div>
+      <div >
         <Navbar />
-        <div className="flex">
-          <LeftBar />
-          <div style={{ flex: 6 }}>
-          <Outlet />            
+        <div className= "flex">
+          <LeftBar/>
+          <div
+  style={{ flex: 6 }} 
+  className={darkMode ? "bg-[#333]" : "bg-[#e9e9f429]"}
+>
+          <Outlet/>            
           </div>
+        
           <RightBar />
         </div>
       </div>
